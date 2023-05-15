@@ -82,13 +82,13 @@ public class StudentModel {
         }
 		return student;
 	}
-	public int update(int id,String name,String sex,int age,String grade,float score, String picpath){
+	public int update(int id,String name,String sex,int age,String grade,float score){
 		int a=0;
 		try {
 			Connection conn=s.getConnection();
 			String sql="update student set name=?,sex=?,age=?,grade=?,score=? where id=?";
 			ps=conn.prepareStatement(sql);
-			ps.setInt(7, id);
+			ps.setInt(6, id);
 			ps.setString(1, name);
 			ps.setString(2, sex);
 			ps.setInt(3,age);
@@ -106,8 +106,7 @@ public class StudentModel {
 		int a=0;
 		try {
 			Connection conn=s.getConnection();
-			//String sql="insert student values(?,?,?,?,?,?,?)";
-			String sql="insert student values(?,?,?,?,?,?)";
+			String sql="insert into student(id,name,sex,age,grade,score) values(?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, id);
 			ps.setString(2, name);
@@ -115,8 +114,6 @@ public class StudentModel {
 			ps.setInt(4,age);
 			ps.setString(5,grade);
 			ps.setFloat(6,score);
-			//ps.setString(7,picpath);
-			
 			a=ps.executeUpdate();
 			s.closeAll(conn,ps,rs);
 		} catch (SQLException e) {

@@ -34,10 +34,10 @@ public class DoUpdateservlet extends HttpServlet {
 		int age = Integer.parseInt(request.getParameter("age"));
 		String grade = request.getParameter("grade");
 		float score = Float.parseFloat(request.getParameter("score"));
-		String picpath = request.getParameter("picpath");
+		//String picpath = request.getParameter("picpath");
  		StudentModel model = new StudentModel();
 
-		model.update(id, name, sex, age, grade, score, picpath);
+		model.update(id, name, sex, age, grade, score);
 		response.sendRedirect("ListStudentServlet.do");
 	}
 

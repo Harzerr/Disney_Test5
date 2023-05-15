@@ -22,6 +22,7 @@
 		<table align="center"  width="660" border="1" cellspacing="0" cellpadding="5" bordercolor="#000">
 			<tr>
 				<th width="50px">   学号</th>
+				<th width="50px">   性别</th>
 				<th width="50px">	相片</th>
 				<th width="100px">	姓名 </th>
 				<th width="50px">	年龄	</th>
@@ -36,7 +37,10 @@
 						${studentitem.id}
 					</td>
 					<td >
-						<img src ="logo.jpg" width="100" height="100 "/>
+						${studentitem.sex}		
+					</td>
+					<td >
+						<img src ="${studentitem.picpath }" width="100" height="100" alt="该用户未上传相片"/>
 					</td>
 					<td >
 						${studentitem.name}

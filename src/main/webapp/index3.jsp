@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>index</title>
 <link rel="stylesheet" href="./static/style.css">
 </head>
 <body>
@@ -16,9 +16,9 @@
 		<div class="card">
 			<div class="content">
 				<h2>01</h2>
-				<h3>allShow</h3>
-				<p>你可以点击当前卡片显示所有用户信息</p>
-				<a href="allShow.jsp">用户显示功能</a>
+				<h3>upload by excel</h3>
+				<p>你可以点击当前卡片批量上传用户信息</p>
+				<a href="studentupload.jsp">用户显示功能</a>
 			</div>
 		</div>
 		<!-- 第二个卡片 -->
@@ -27,50 +27,20 @@
 				<h2>02</h2>
 				<h3>insert</h3>
 				<p>你可以点击当前卡片插入用户信息</p>
-				<a href="insert.jsp">用户新增功能</a>
+				<a href="studentinsert.jsp">用户新增功能</a>
 			</div>
 		</div>
 		<!-- 第三个卡片 -->
 		<div class="card">
 			<div class="content">
 				<h2>04</h2>
-				<h3>dele</h3>
-				<p>你可以点击当前卡片删除用户信息</p>
-				<a href="dele.jsp">用户删除功能</a>
+				<h3>student upload picture</h3>
+				<p>你可以点击当前卡片上传用户相片</p>
+				<a href="studentuploadpic.jsp">用户相片上传功能</a>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
-		<!-- 第一个卡片 -->
-		<div class="card">
-			<div class="content">
-				<h2>03</h2>
-				<h3>update</h3>
-				<p>你可以点击当前卡片更新用户信息</p>
-				<a href="update.jsp">用户更新功能</a>
-			</div>
-		</div>
-		<!-- 第二个卡片 -->
-		<div class="card">
-			<div class="content">
-				<h2>04</h2>
-				<h3>search</h3>
-				<p>你可以点击当前卡片检索用户信息</p>
-				<a href="search.jsp">用户检索功能</a>
-			</div>
-		</div>
-
-		<!-- 第三个卡片 -->
-		<div class="card">
-			<div class="content">
-				<h2>06</h2>
-				<h3>upload</h3>
-				<p>你可以点击当前卡片实现批量上传</p>
-				<a href="upload.jsp">批量上传功能</a>
-			</div>
-		</div>
-	</div>
 
 	<script type="text/javascript" src="vanilla-tilt.js"></script>
 	<script>

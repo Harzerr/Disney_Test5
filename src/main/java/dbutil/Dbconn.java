@@ -11,8 +11,8 @@ public class Dbconn {
 	private Connection conn;
 	public  Connection getConnection() throws SQLException{
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","hexinna0916");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/students?useUnicode=true&characterEncoding=utf8","root","hexinna0916");
 		} catch (ClassNotFoundException e) {
 			System.out.println("找不到服务！！");
 			e.printStackTrace();

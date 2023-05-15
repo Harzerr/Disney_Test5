@@ -31,8 +31,7 @@
 				<input type="text" name="score" />
 				<br></p>
 				<p>  相片:
-				  <input type="file" name="picpath" value = "file"/>
-				  <input type="submit" value="上传">
+				  <input type="file" name="pic"/>
 				<br></p>
 				<input type="submit" value="提交" />
 				<input type="reset" value="重置" />

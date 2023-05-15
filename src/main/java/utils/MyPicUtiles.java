@@ -13,15 +13,16 @@ public class MyPicUtiles {
  private static final long serialVersionUID = 1L;
  
  public static  boolean isPic(String fileName) {
-		// 版本2007+的后缀名
-		String type = ".jpg";
-		// 文件的后缀名
-		String fileType = fileName.substring(fileName.lastIndexOf("."));
+		if (!"".equals(fileName)) {
+			String type = ".jpg";
+			// 文件的后缀名
+			String fileType = fileName.substring(fileName.lastIndexOf("."));
 
-		if (type.equalsIgnoreCase(fileType)) {
-			return true;
+			if (type.equalsIgnoreCase(fileType)) {
+				return true;
+			}
+
 		}
-
 		return false;
 	}
  public Map<String,String> File_upload(HttpServletRequest request,String filepath) {
@@ -31,7 +32,7 @@ public class MyPicUtiles {
          try {
              //1.创建DiskFileItemFactory对象,设置缓冲区大小和临时目录文件
              DiskFileItemFactory factory = new DiskFileItemFactory();
-             //2.创建ServletFileUpload对象，并设置上传文件的大小限制
+             //2.创建对象，并设置上传文件的大小限制
              ServletFileUpload sfu = new ServletFileUpload(factory);
              sfu.setSizeMax(10 * 1024 * 1024);//以byte为单位 1024byte->1KB*1024=1M->1M*10=10M
              sfu.setHeaderEncoding("utf-8");
